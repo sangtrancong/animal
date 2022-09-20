@@ -13,7 +13,7 @@
                             <div class="col-sm-6" style="margin-bottom: 30px">
                                 <div class="port-home-image">
                                     @if ($p->video_url != null||$p->video_url != '')
-                                        <iframe width="100%" height="250px" allowfullscreen src="{{ $p->video_url }}">
+                                        <iframe width="100%" height="250px" allowfullscreen src="https://www.youtube.com/embed/{{ $p->video_url }}">
                                         </iframe>
                                     @else
                                         <a href="/port/{{ $p->slug }}">

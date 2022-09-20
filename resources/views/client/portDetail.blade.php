@@ -28,7 +28,7 @@
                     <hr>
                     @if ($port->video_url!=null)
                     <iframe width="100%" height="400px" allowfullscreen
-                    src="{{$port->video_url}}">
+                    src="https://www.youtube.com/embed/{{$port->video_url}}">
                     </iframe>
                     @endif
                     <h5>{{$port->short_content}}</h5>

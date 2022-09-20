@@ -43,36 +43,30 @@ class PortController extends Controller
 
         $rules = [
             'title' => 'required',
-            'file'=>'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
         ];
         $customMessage = [
             'title.required' => 'Nhập tiêu đề bài viết!',
-            'file.mimes'=>'Hình ảnh không hợp lệ!',
-            'file.image'=>'Hình ảnh không hợp lệ!',
+            'file.mimes' => 'Hình ảnh không hợp lệ!',
+            'file.image' => 'Hình ảnh không hợp lệ!',
         ];
         $this->validate($request, $rules, $customMessage);
         $port = new Port();
-        $image=$request->file('file');
-        $storedPath=$image->store('images/port',['disk' => 'local']);
-        if($request->hasFile('file')){
+        $image = $request->file('file');
+        $storedPath = $image->store('images/port', ['disk' => 'local']);
+        if ($request->hasFile('file')) {
             $port->title = $request->title;
-            $port_url=$port->video_url;
-            if($port_url!=null||$port_url!=''){
-$port->video_url="https://www.youtube.com/embed/". $request->video_url;
-}
-            
-            $port->category_id=$request->category_id;
+            $port->video_url = $request->video_url;
+            $port->category_id = $request->category_id;
             $port->short_content = $request->short_content;
             $port->content = $request->content;
-            $port->image=$storedPath;
-            $port->status=true;
-            $result=$port->save();
-            if($result){
+            $port->image = $storedPath;
+            $port->status = true;
+            $result = $port->save();
+            if ($result) {
                 return redirect('admin/port');
             }
-        }
-        else return redirect()->back();
-
+        } else return redirect()->back();
     }
 
     public function imageUpload(Request $request)
@@ -120,8 +114,8 @@ $port->video_url="https://www.youtube.com/embed/". $request->video_url;
      */
     public function show($id)
     {
-        $port=Port::find($id);
-        return view('adminView.port.portForm')->with('port',$port);
+        $port = Port::find($id);
+        return view('adminView.port.portForm')->with('port', $port);
     }
 
     /**
@@ -132,9 +126,9 @@ $port->video_url="https://www.youtube.com/embed/". $request->video_url;
      */
     public function edit($id)
     {
-        $port=Port::find($id);
-        $result= Port::destroy($id);
-        if($result>0){
+        $port = Port::find($id);
+        $result = Port::destroy($id);
+        if ($result > 0) {
             Storage::disk('local')->delete($port->image);
         }
         return redirect('admin/port');
@@ -149,35 +143,34 @@ $port->video_url="https://www.youtube.com/embed/". $request->video_url;
      */
     public function update(Request $request, $id)
     {
-        $rules=[
-            'title'=>'required',
-            'file'=>'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
+        $rules = [
+            'title' => 'required',
+            'file' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
 
         ];
-        $customMessage=[
-            'title.required'=>'Tiêu đề không được để trống!',
-            'file.mimes'=>'Hình ảnh không hợp lệ!',
-            'file.image'=>'Hình ảnh không hợp lệ!',
+        $customMessage = [
+            'title.required' => 'Tiêu đề không được để trống!',
+            'file.mimes' => 'Hình ảnh không hợp lệ!',
+            'file.image' => 'Hình ảnh không hợp lệ!',
         ];
-        $this->validate($request,$rules,$customMessage);
-        $image=$request->file('file');
+        $this->validate($request, $rules, $customMessage);
+        $image = $request->file('file');
         $port = Port::find($id);
-        if($request->hasFile('file')){
-            $storedPath=$image->store('images/port',['disk' => 'local']);
+        if ($request->hasFile('file')) {
+            $storedPath = $image->store('images/port', ['disk' => 'local']);
             Storage::disk('local')->delete($port->image);
-            $port->image=$storedPath;
+            $port->image = $storedPath;
         }
         $port->title = $request->title;
-        $port->video_url=$request->video_url;
-        $port->category_id=$request->category_id;
+        $port->video_url = $request->video_url;
+        $port->category_id = $request->category_id;
         $port->short_content = $request->short_content;
         $port->content = $request->content;
-        $port->status=$request->status;
-        $result=$port->save();
-        if($result){
+        $port->status = $request->status;
+        $result = $port->save();
+        if ($result) {
             return redirect('admin/port');
-        }
-        else return redirect()->back();
+        } else return redirect()->back();
     }
 
     /**
@@ -190,19 +183,20 @@ $port->video_url="https://www.youtube.com/embed/". $request->video_url;
     {
         //
     }
-    public function hightlight($id){
-        $port=Port::find($id);
-        if($port->status==1){
-            $port->status=2;
-            $result=$port->save();
-            if($result){
+    public function hightlight($id)
+    {
+        $port = Port::find($id);
+        if ($port->status == 1) {
+            $port->status = 2;
+            $result = $port->save();
+            if ($result) {
                 return redirect('admin/port');
             }
         }
-        if($port->status==2){
-            $port->status=1;
-            $result=$port->save();
-            if($result){
+        if ($port->status == 2) {
+            $port->status = 1;
+            $result = $port->save();
+            if ($result) {
                 return redirect('admin/port');
             }
         }
