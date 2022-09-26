@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title', 'Bài viết')
+@section('title', 'Article')
 @section('content')
 
 

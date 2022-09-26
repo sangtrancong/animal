@@ -1,5 +1,11 @@
 @extends('layout.index')
-@section('title', 'Bài viết')
+@section('meta')
+<meta property="og:title" content="{{$port->title}}" />
+<meta property="og:image" content="{{URL::to('/').'/storage/'.$port->image}}" />
+<meta property="og:description"
+  content="{{$port->short_content}}" />
+@endsection
+@section('title', 'Article')
 @section('content')
 
     <div class="child-content">
