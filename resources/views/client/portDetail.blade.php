@@ -7,7 +7,8 @@
 @endsection
 @section('title', 'Article')
 @section('content')
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="z7Ot7cfL"></script>
     <div class="child-content">
         <div class="container">
             <div class="row">
@@ -41,7 +42,10 @@
                     <div class="portContentDetailPage">
                         {!! $port->content !!}
                     </div>
-
+                    <div class="text-right">
+                        <div class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        <button id="btnCoppy" style="margin-top: -7px" class="btn btn-sm btn-primary" title="Coppy link" onclick="copyText()"><i class="fa fa-copy"></i></button>
+                    </div>
 
                 </div>
                 <div class="col-sm-4">
@@ -64,4 +68,13 @@
     </div>
 
 
+@endsection
+@section('script')
+<script>
+    function copyText() {
+        var myServerData = <?=json_encode(Request::url())?>;
+        /* Copy text into clipboard */
+        navigator.clipboard.writeText(myServerData);
+    }
+</script>
 @endsection
