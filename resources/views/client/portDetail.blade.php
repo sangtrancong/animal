@@ -42,9 +42,9 @@
                     <div class="portContentDetailPage">
                         {!! $port->content !!}
                     </div>
-                    <div class="text-right">
+                    <div style="margin-bottom: 25px" class="text-right">
                         <div class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                        <button id="btnCoppy" style="margin-top: -7px" class="btn btn-sm btn-primary" title="Coppy link" onclick="copyText()"><i class="fa fa-copy"></i></button>
+                        <button id="btnCoppy" style="margin-top: -10px" class="btn btn-sm btn-primary" title="Coppy link" onclick="copyText()"><i class="fa fa-copy"></i></button>
                     </div>
 
                 </div>

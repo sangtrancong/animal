@@ -531,6 +531,8 @@ option:hover {
 .portContentDetailPage img{
     display:block;
   max-width:100%;
+  width: 100% !important;
+    height: auto !important;
 }
 .portContentDetailPage img:parent {
   	margin:0px !important;
