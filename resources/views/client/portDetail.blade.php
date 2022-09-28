@@ -4,6 +4,7 @@
 <meta property="og:image" content="{{URL::to('/').'/storage/'.$port->image}}" />
 <meta property="og:description"
   content="{{$port->short_content}}" />
+  <meta name="twitter:card" content="summary" />
 @endsection
 @section('title', 'Article')
 @section('content')
@@ -43,8 +44,10 @@
                         {!! $port->content !!}
                     </div>
                     <div style="margin-bottom: 25px" class="text-right">
-                        <div class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                        <button id="btnCoppy" style="margin-top: -10px" class="btn btn-sm btn-primary" title="Coppy link" onclick="copyText()"><i class="fa fa-copy"></i></button>
+                        <a id="btnCoppy" style="margin-top: -8px; line-height: 1.3 !important;color: white" target="blank" href="https://twitter.com/intent/tweet?url={{Request::url()}}" class="btn btn-sm btn-primary" title="Coppy link" ><i class="fa fa-twitter"></i>&nbsp;<b> Share</b> </a>
+                        <div  class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        <button id="btnCoppy" style="margin-top: -8px; line-height: 1.3 !important" class="btn btn-sm btn-primary" title="Coppy link" onclick="copyText()"><i class="fa fa-copy"></i></button>
+
                     </div>
 
                 </div>
