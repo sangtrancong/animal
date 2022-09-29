@@ -2,9 +2,11 @@
 @section('meta')
 <meta property="og:title" content="{{$port->title}}" />
 <meta property="og:image" content="{{URL::to('/').'/storage/'.$port->image}}" />
-<meta property="og:description"
-  content="{{$port->short_content}}" />
-  <meta name="twitter:card" content="summary" />
+<meta property="og:description" content="{{$port->short_content}}" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="{{$port->title}}" />
+<meta property="twitter:image" content="{{URL::to('/').'/storage/'.$port->image}}" />
+<meta property="twitter:description" content="{{$port->short_content}}" />
 @endsection
 @section('title', 'Article')
 @section('content')
