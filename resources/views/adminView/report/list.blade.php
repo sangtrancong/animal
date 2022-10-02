@@ -5,7 +5,8 @@
 
 </style>
 <div> Trong ngày: {{$countDay}}</div>
-<div>Trong tháng: {{$countMounth}}</div>
+
+<div>Trong tháng: {{$data[Carbon\Carbon::now()->month]}}</div>
 <div>Tổng Số lượng truy cập: {{$countSum}}</div>
 <a href="/admin/report-detail">Xem thống kê theo ngày</a>
 <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
