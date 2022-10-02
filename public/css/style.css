@@ -554,7 +554,7 @@ option:hover {
     padding-left: 15px;
 }
 .col-left-top {
-    width: calc(100% - 320px);
+    width: calc(100% - 380px);
 }
 .top-port-new {
     overflow: hidden;
