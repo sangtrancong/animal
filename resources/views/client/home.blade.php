@@ -89,11 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-right-top">
-                    {{-- <img width="100%" src="/storage/images/homepage/img4.jpg" alt="">
-                    <img width="100%" src="/storage/images/homepage/img2.jpg" alt="">
-                    <img width="100%" src="/storage/images/homepage/img1.jpg" alt=""> --}}
-                </div>
+
             </div>
             <div class="news container">
 
