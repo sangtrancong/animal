@@ -12,6 +12,8 @@
     <link rel="icon" type="image/x-icon" href="/images/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8351887207780490"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -136,26 +138,6 @@
             },
 
         });
-        // $('#search2').typeahead({
-        //     source: function(query, process) {
-        //         return $.get(route, {
-        //             query: query
-        //         }, function(data) {
-        //             if (data.length === 0) {
-        //                 $('#autocomplete2').hide()
-        //             } else {
-        //                 $('#autocomplete2').show()
-        //             }
-        //             $('#autocomplete').empty()
-        //             data.forEach(element => {
-        //                 var item =
-        //                     `<a href="${element.url}" target="blank"><div class="autocomplete-item"><div class="item-left"><img src="/storage/${element.image}" width="100%" /></div><div class="item-right">${element.name}</div></div></a>`
-        //                 $('#autocomplete2').append(item);
-        //             });
-        //         });
-        //     },
-
-        // });
     </script>
      @yield('script')
 </body>
