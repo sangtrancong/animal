@@ -40,13 +40,9 @@
                     </div>
 
                 </div>
-                <div  class="col-sm-4 homepage-left-content">
-                    <img src="/storage/images/homepage/img1.jpg" width="100%" alt="">
-                    <hr>
-                    <img src="/storage/images/homepage/img2.jpg" width="100%" alt="">
-                    <hr>
-                    <img src="/storage/images/homepage/img3.png" width="100%" alt="">
-                </div>
+                {{-- <div  class="col-sm-4 homepage-left-content">
+
+                </div> --}}
 
             </div>
         </div>
