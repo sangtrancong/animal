@@ -25,7 +25,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><span><i class="fa fa-phone"></i></span></span>
                                     </div>
-                                    <input type="text" disabled class="form-control" value="0963 262  036">
+                                    <input type="text" disabled class="form-control" value="+84 963 262 036">
                                 </div>
                             </div>
                             <div class="col-sm-6">

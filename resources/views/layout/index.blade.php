@@ -96,7 +96,7 @@
 
             <div>
                 <b>INFOMATION</b>
-                <div><span><i class="fa fa-phone"></i></span> &nbsp; 0963 262 036</div>
+                <div><span><i class="fa fa-phone"></i></span> &nbsp; +84 963 262 036</div>
                 <div><span><i class="fa fa-envelope "></i></span>&nbsp; <a style="color: white"
                         href="mailto:simplemanplusvn@gmail.com">simplemanplusvn@gmail.com</a></div>
                 <div><span><i class="fa fa-map-marker"></i></span> &nbsp;&nbsp; 503 Nam Ky Khoi Nghia Street, 3
