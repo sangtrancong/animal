@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title', 'Giới thiệu')
+@section('title', 'Contact')
 @section('content')
     <div class="top-space">
 
@@ -51,8 +51,11 @@
                                     href="https://www.facebook.com/Hero-Dog-Stories-104413589062739/?ref=pages_you_manage"><i
                                         class="fa fa-facebook" style="color: white"></i></a></div>
                                  <div class="icon-lg"><a target="_blank"
-                                    href="https://www.youtube.com/channel/UCPU8J1JVPuwYGU5azaS-XuA"><i
+                                    href="https://youtube.com/channel/UCrGb9CLSH-dpQr9t3-z1w9A"><i
                                         class=" fa fa-youtube" style="color: white"></i></a></div>
+                                 <div class="icon-lg"><a target="_blank"
+                                    href="https://twitter.com/stories_dog"><i
+                                        class=" fa fa-twitter" style="color: white"></i></a></div>
                             </div>
 
                         </div>

@@ -106,9 +106,9 @@
                             href="https://www.facebook.com/Hero-Dog-Stories-104413589062739/?ref=pages_you_manage"><i
                                 class="fa fa-facebook"></i></a></div>
                     <div class="icon"><a target="_blank"
-                            href="https://www.youtube.com/channel/UCPU8J1JVPuwYGU5azaS-XuA"><i
+                            href="https://youtube.com/channel/UCrGb9CLSH-dpQr9t3-z1w9A"><i
                                 class="fa fa-youtube"></i></a></div>
-                    <div class="icon"><a target="_blank"><i class="fa fa-twitter"></i></a></div>
+                    <div class="icon"><a target="_blank" href="https://twitter.com/stories_dog"><i class="fa fa-twitter"  ></i></a></div>
                 </div>
                 <div>© Copyright - 2022, website made by AnimalStoriesPlus. All rights reserves</div>
                 <div>

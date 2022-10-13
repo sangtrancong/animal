@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title', 'Giới thiệu')
+@section('title', 'Policy')
 @section('content')
     <div class="top-space">
 

@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title', 'Trang chủ')
+@section('title', 'Home')
 @section('content')
 
     <div style=" padding-bottom: 35px">
