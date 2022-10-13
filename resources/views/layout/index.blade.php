@@ -2,6 +2,18 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SJQE8PKK9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7SJQE8PKK9');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8351887207780490"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -91,12 +103,12 @@
                     District, HCM City </div>
                 <div class="grid-icon">
                     <div class="icon"><a target="_blank"
-                        href="https://www.facebook.com/Hero-Dog-Stories-104413589062739/?ref=pages_you_manage"><i
-                            class="fa fa-facebook"></i></a></div>
-                <div class="icon"><a target="_blank"
-                        href="https://www.youtube.com/channel/UCPU8J1JVPuwYGU5azaS-XuA"><i
-                            class="fa fa-youtube"></i></a></div>
-                <div class="icon"><a target="_blank"><i class="fa fa-twitter"></i></a></div>
+                            href="https://www.facebook.com/Hero-Dog-Stories-104413589062739/?ref=pages_you_manage"><i
+                                class="fa fa-facebook"></i></a></div>
+                    <div class="icon"><a target="_blank"
+                            href="https://www.youtube.com/channel/UCPU8J1JVPuwYGU5azaS-XuA"><i
+                                class="fa fa-youtube"></i></a></div>
+                    <div class="icon"><a target="_blank"><i class="fa fa-twitter"></i></a></div>
                 </div>
                 <div>© Copyright - 2022, website made by AnimalStoriesPlus. All rights reserves</div>
                 <div>
@@ -104,7 +116,10 @@
             </div>
             <div id="footer-col-right">
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2658200165793!2d106.68034471428976!3d10.790941392311709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d350ac4adf%3A0xbd6f140b1c094793!2zNTAzIMSQLiBOYW0gS-G7syBLaOG7n2kgTmdoxKlhLCBQaMaw4budbmcgMTQsIFF14bqtbiAzLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1663288303491!5m2!1svi!2s" width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2658200165793!2d106.68034471428976!3d10.790941392311709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d350ac4adf%3A0xbd6f140b1c094793!2zNTAzIMSQLiBOYW0gS-G7syBLaOG7n2kgTmdoxKlhLCBQaMaw4budbmcgMTQsIFF14bqtbiAzLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1663288303491!5m2!1svi!2s"
+                    width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
@@ -139,7 +154,7 @@
 
         });
     </script>
-     @yield('script')
+    @yield('script')
 </body>
 
 </html>
