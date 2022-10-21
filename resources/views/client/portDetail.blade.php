@@ -35,6 +35,15 @@
                     </i>
 
                     <hr>
+                    <style>
+                        #M838529ScriptRootC1376678 {
+                            min-height: 300px;
+                        }
+                    </style>
+                    <!-- Composite Start -->
+                    <div id="M838529ScriptRootC1376678"></div>
+                    <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376678.js" async></script>
+                    <!-- Composite End -->
                     @if ($port->video_url != null)
                         <iframe width="100%" height="400px" allowfullscreen
                             src="https://www.youtube.com/embed/{{ $port->video_url }}">
@@ -77,15 +86,17 @@
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <!-- Composite Start -->
-                    <div id="M838529ScriptRootC1376684">
-                    </div>
-                    <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376684.js" async></script>
-                    <!-- Composite End -->
-                </div>
+            <div class="container disable-mobile">
+                <!-- Composite Start -->
+                <div id="M838529ScriptRootC1376684"></div>
+                <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376684.js" async></script>
+                <!-- Composite End -->
             </div>
+            <!-- Composite Start -->
+            <div id="M838529ScriptRootC1376694"></div>
+            <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376694.js" async></script>
+            <!-- Composite End -->
+
         </div>
 
     </div>

@@ -594,7 +594,9 @@ option:hover {
     .topnavMobile {
         display: none !important;
     }
-
+    .only_mobile {
+        display: none;
+    }
     .search-group-mobile {
         display: none;
     }

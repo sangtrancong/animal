@@ -99,8 +99,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-rigt-top">
-
+                <div class="col-right-top">
+                    <!-- Composite Start -->
+                    <div id="M838529ScriptRootC1376687"></div>
+                    <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376687.js" async></script>
+                    <!-- Composite End -->
                 </div>
             </div>
             <div class="container disable-mobile">
@@ -108,6 +111,14 @@
                 <div id="M838529ScriptRootC1376684"></div>
                 <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376684.js" async></script>
                 <!-- Composite End -->
+            </div>
+            <div class="container only-mobile">
+                <!-- Composite Start -->
+                <div id="M838529ScriptRootC1376782">
+                </div>
+                <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376782.js" async></script>
+                <!-- Composite End -->
+
             </div>
             <div class="news container">
 
