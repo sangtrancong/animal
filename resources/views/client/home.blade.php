@@ -60,28 +60,38 @@
         </div> --}}
         <div class="child-content">
             <div class="container  flexContent">
-                <div  class="col-left-top">
+                <div class="col-left-top">
                     @isset($hotContent[0])
-                    <div class="top-port-new ">
-                        <article class="thumb"><a href="/port/{{$hotContent[0]->slug}}"><img width="100%" style="max-width: 400px; float: left; padding-right: 15px" src="/storage/{{$hotContent[0]->image}}" alt=""></a> </article>
-                        <h4 class="title-port"><a href="/port/{{$hotContent[0]->slug}}">{{$hotContent[0]->title}}</a></h4>
-                        <p class="short-content"><a href="/port/{{$hotContent[0]->slug}}">{{$hotContent[0]->short_content}}</a></p>
-                    </div>
+                        <div class="top-port-new ">
+                            <article class="thumb"><a href="/port/{{ $hotContent[0]->slug }}"><img width="100%"
+                                        style="max-width: 400px; float: left; padding-right: 15px"
+                                        src="/storage/{{ $hotContent[0]->image }}" alt=""></a> </article>
+                            <h4 class="title-port"><a href="/port/{{ $hotContent[0]->slug }}">{{ $hotContent[0]->title }}</a>
+                            </h4>
+                            <p class="short-content"><a
+                                    href="/port/{{ $hotContent[0]->slug }}">{{ $hotContent[0]->short_content }}</a></p>
+                        </div>
                     @endisset
 
                     <div class="sub-port-new">
                         <div class="row">
                             @isset($hotContent[1])
-                            <div class="col-sm-6" style="border-right: solid 2px #eae7e7">
-                                <h5 class="title-port"><a href="/port/{{$hotContent[1]->slug}}">{{$hotContent[1]->title}}</a></h5>
-                                <div class="short-content"><a href="/port/{{$hotContent[1]->slug}}">{{$hotContent[1]->short_content}}</a></div>
-                            </div>
+                                <div class="col-sm-6" style="border-right: solid 2px #eae7e7">
+                                    <h5 class="title-port"><a
+                                            href="/port/{{ $hotContent[1]->slug }}">{{ $hotContent[1]->title }}</a></h5>
+                                    <div class="short-content"><a
+                                            href="/port/{{ $hotContent[1]->slug }}">{{ $hotContent[1]->short_content }}</a>
+                                    </div>
+                                </div>
                             @endisset
                             @isset($hotContent[2])
-                            <div class="col-sm-6">
-                                <h5 class="title-port"><a href="/port/{{$hotContent[2]->slug}}">{{$hotContent[2]->title}}</a></h5>
-                                <div class="short-content"><a href="/port/{{$hotContent[2]->slug}}">{{$hotContent[2]->short_content}}</a></div>
-                            </div>
+                                <div class="col-sm-6">
+                                    <h5 class="title-port"><a
+                                            href="/port/{{ $hotContent[2]->slug }}">{{ $hotContent[2]->title }}</a></h5>
+                                    <div class="short-content"><a
+                                            href="/port/{{ $hotContent[2]->slug }}">{{ $hotContent[2]->short_content }}</a>
+                                    </div>
+                                </div>
                             @endisset
 
 
@@ -90,43 +100,75 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <!-- Composite Start -->
+                <div id="M838529ScriptRootC1376684"></div>
+                <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376684.js" async></script>
+                <!-- Composite End -->
+            </div>
             <div class="news container">
 
-                <h1 class="text-center" ><a style="color: #bd2b08" href="/suc-khoe">Dog</a> </h1>
+                <h1 class="text-center"><a style="color: #bd2b08" href="/suc-khoe">Dog</a> </h1>
                 <br>
                 <div class="port-new-content">
                     <div class="row">
                         @foreach ($dogContent as $h)
-                        <div class="col-sm-6  port-new-item">
-                            <h5 class="title-port"><a href="/port/{{$h->slug}}">{{$h->title}}</a></h5>
-                            <article class="thumb"> <a href="/port/{{$h->slug}}"><img width="100%" style="max-width: 200px; min-height: 115px; float: left; padding-right: 15px" src="/storage/{{$h->image}}" alt=""></a></article>
-                            <p class="short-content"><a href="/port/{{$h->slug}}">{{$h->short_content}}</a></p>
-                        </div>
+                            <div class="col-sm-6  port-new-item">
+                                <h5 class="title-port"><a href="/port/{{ $h->slug }}">{{ $h->title }}</a></h5>
+                                <article class="thumb"> <a href="/port/{{ $h->slug }}"><img width="100%"
+                                            style="max-width: 200px; min-height: 115px; float: left; padding-right: 15px"
+                                            src="/storage/{{ $h->image }}" alt=""></a></article>
+                                <p class="short-content"><a href="/port/{{ $h->slug }}">{{ $h->short_content }}</a>
+                                </p>
+                            </div>
                         @endforeach
 
                     </div>
                     <div> <a class="btn btn-custom" href="/dog">Read More</a></div>
                 </div>
             </div>
+            <div class="container">
+                <style>
+                    #M838529ScriptRootC1376678 {
+                        min-height: 300px;
+                    }
+                </style>
+                <!-- Composite Start -->
+                <div id="M838529ScriptRootC1376678">
+                </div>
+                <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376678.js" async></script>
+                <!-- Composite End -->
+
+            </div>
             <div class="news container" style="">
                 <hr>
-                <h1 class="text-center" ><a style="color: #bd2b08 " href="/giao-duc">Cat</a></h1>
+                <h1 class="text-center"><a style="color: #bd2b08 " href="/giao-duc">Cat</a></h1>
                 <br>
                 <div class="port-new-content">
                     <div class="row">
                         @foreach ($catContent as $h)
-                        <div class="col-sm-6  port-new-item">
-                            <h5 class="title-port"><a href="/port/{{$h->slug}}">{{$h->title}}</a></h5>
-                            <article class="thumb"> <a href="/port/{{$h->slug}}"><img width="100%" style="max-width: 200px; min-height: 115px; float: left; padding-right: 15px" src="/storage/{{$h->image}}" alt=""></a></article>
-                            <p class="short-content"><a href="/port/{{$h->slug}}">{{$h->short_content}}</a></p>
-                        </div>
+                            <div class="col-sm-6  port-new-item">
+                                <h5 class="title-port"><a href="/port/{{ $h->slug }}">{{ $h->title }}</a></h5>
+                                <article class="thumb"> <a href="/port/{{ $h->slug }}"><img width="100%"
+                                            style="max-width: 200px; min-height: 115px; float: left; padding-right: 15px"
+                                            src="/storage/{{ $h->image }}" alt=""></a></article>
+                                <p class="short-content"><a href="/port/{{ $h->slug }}">{{ $h->short_content }}</a>
+                                </p>
+                            </div>
                         @endforeach
 
                     </div>
-                    <div> <a class="btn btn-custom"  href="/cat">Read more</a></div>
+                    <div> <a class="btn btn-custom" href="/cat">Read more</a></div>
                 </div>
             </div>
+            <div class="container">
+                <!-- Composite Start -->
+                <div id="M838529ScriptRootC1376686">
+                </div>
+                <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376686.js" async></script>
+                <!-- Composite End -->
 
+            </div>
         </div>
     </div>
 
