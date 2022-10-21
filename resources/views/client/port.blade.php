@@ -51,6 +51,10 @@
                 </div>
 
             </div>
+            <!-- Composite Start -->
+            <div id="M838529ScriptRootC1376694"></div>
+            <script src="https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1376694.js" async></script>
+            <!-- Composite End -->
         </div>
 
     </div>

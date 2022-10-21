@@ -100,10 +100,7 @@ body {
     max-width: 50%;
 }
 .homepage-left-content{
-    position: sticky;
-    top: 75px;
-    height: 10vh;
-    z-index: -1;
+
 }
 .category-list {
     color: white;
@@ -617,6 +614,9 @@ option:hover {
 @media screen and (max-width: 800px) {
     .portContentDetailPage > p{
       margin-left:0 !important;
+    }
+    .disable-mobile {
+        display: none;
     }
   	.portContentDetailPage img{
       width:100%;
