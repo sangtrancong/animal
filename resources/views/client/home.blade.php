@@ -122,7 +122,7 @@
             </div>
             <div class="news container">
 
-                <h1 class="text-center"><a style="color: #bd2b08" href="/suc-khoe">Dog</a> </h1>
+                <h1 class="text-center"><a style="color: #bd2b08" href="/dog">Dog</a> </h1>
                 <br>
                 <div class="port-new-content">
                     <div class="row">
@@ -156,7 +156,7 @@
             </div>
             <div class="news container" style="">
                 <hr>
-                <h1 class="text-center"><a style="color: #bd2b08 " href="/giao-duc">Cat</a></h1>
+                <h1 class="text-center"><a style="color: #bd2b08 " href="/cat">Cat</a></h1>
                 <br>
                 <div class="port-new-content">
                     <div class="row">

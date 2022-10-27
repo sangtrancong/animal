@@ -51,6 +51,8 @@
         </a>
         <div id="myLinks">
             <a href="/">Home</a>
+            <a href="/dog">Dog</a>
+            <a href="/cat">Cat</a>
             <a href="/about">About Us</a>
             <a href="/contact">Contact</a>
             <a href="/policy">Privacy Policy</a>

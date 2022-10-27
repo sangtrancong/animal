@@ -50,7 +50,7 @@
                         </iframe>
                     @endif
                     <h5>{{ $port->short_content }}</h5>
-                    <div class="portContentDetailPage">
+                    <div id="portContentDetailPage" class="portContentDetailPage">
                         {!! $port->content !!}
                     </div>
                     <div style="margin-bottom: 25px" class="text-right">
@@ -110,5 +110,11 @@
             /* Copy text into clipboard */
             navigator.clipboard.writeText(myServerData);
         }
+        var adskeeper ='<div id="M838529ScriptRootC1378911"></div>';
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "https://jsc.adskeeper.com/a/n/animalstoriesplus.com.1378911.js";
+    $( "#portContentDetailPage p:nth-child(3)").append(adskeeper);
+    $( "#portContentDetailPage p:nth-child(3)").append(s);
     </script>
 @endsection
