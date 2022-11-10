@@ -1,7 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^lifestories\.fun$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.lifestories\.fun$
+RewriteRule ^(.*)$ "https\:\/\/animalstoriesplus\.com\/$1" [R=301,L]
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^lifestories\.fun$
-RewriteRule ^/?$ "https://animalstoriesplus.com/" [R=301,L]
