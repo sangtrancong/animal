@@ -1,7 +1,6 @@
 @extends('layout.index')
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
-    <meta name="og:type" content="article"/>
     <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
@@ -58,9 +57,9 @@
                     </div>
                     <div style="margin-bottom: 25px" class="text-right">
                         <a id="btnCoppy" style="margin-top: -8px; line-height: 1.3 !important;color: white" target="blank"
-                            href="https://twitter.com/intent/tweet?url={{ Request::url() }}" class="btn btn-sm btn-primary"
+                            href="https://twitter.com/intent/tweet?url={{ config('hostserver.domain') . 'port/' . $port->slug }}" class="btn btn-sm btn-primary"
                             title="Coppy link"><i class="fa fa-twitter"></i>&nbsp;<b> Share</b> </a>
-                        <div class="fb-share-button" data-href="{{ Request::url() }}" data-layout="button_count"
+                        <div class="fb-share-button" data-href="{{ config('hostserver.domain') . 'port/' . $port->slug }}" data-layout="button_count"
                             data-size="large"><a target="_blank"
                                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse"
                                 class="fb-xfbml-parse-ignore">Share</a></div>
