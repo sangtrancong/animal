@@ -1,6 +1,6 @@
 
     RewriteEngine On
-    RewriteRule ^(.*)$ public/$1 [L]
+    <!-- RewriteRule ^(.*)$ public/$1 [L] -->
 
 RewriteCond %{HTTP_HOST} ^lifestories.fun [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.lifestories.fun [NC]
