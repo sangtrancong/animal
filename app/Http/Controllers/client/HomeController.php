@@ -10,7 +10,7 @@ use App\Models\Product;
 use App\Models\VisitHistory;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -79,14 +79,19 @@ class HomeController extends Controller
         $listPortRef = PortRef::where('status', 1)->orderby('created_at', 'DESC')->limit(7)->get();
         return view('client.blog')->with(['list' => $list, 'listPortRef' => $listPortRef]);
     }
-    public function portDetail($slug)
+    public function portDetail($slug,Request $request)
     {
         try {
+            if($request['fbclid']==null){
+                $port = Port::where(['slug' => $slug])->where('status', '<>', 0)->first();
+                $categoryPort = $port->category_id;
+                $portOther = Port::where(['category_id' => $categoryPort])->where('status', '<>', 0)->where('id', '<>', $port->id)->orderby('created_at', 'DESC')->limit(7)->get();
+                return view('client.portDetail')->with(['port' => $port, 'portOther' => $portOther]);
+            }
+            else {
+                 return redirect(config('hostserver.domain') . 'port/' . $slug);
+            }
 
-            $port = Port::where(['slug' => $slug])->where('status', '<>', 0)->first();
-            $categoryPort = $port->category_id;
-            $portOther = Port::where(['category_id' => $categoryPort])->where('status', '<>', 0)->where('id', '<>', $port->id)->orderby('created_at', 'DESC')->limit(7)->get();
-            return view('client.portDetail')->with(['port' => $port, 'portOther' => $portOther]);
         } catch (\Throwable $th) {
             // report($th);
             // return false;
