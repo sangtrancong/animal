@@ -1,12 +1,15 @@
 @extends('layout.index')
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
-    <meta property="og:image" content="{{ URL::to('/') . '/storage/' . $port->image }}" />
+    <meta name="og:type" content="article"/>
+    {{-- <meta name="og:url" content="http://www.imdb.com/title/tt0117500/"/> --}}
+    <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="{{ $port->title }}" />
-    <meta property="twitter:image" content="{{ URL::to('/') . '/storage/' . $port->image }}" />
+    <meta property="twitter:image" content="{{ config('hostserver.domain')  . 'storage/' . $port->image }}" />
     <meta property="twitter:description" content="{{ $port->short_content }}" />
+    <link rel="canonical" href="{{config('hostserver.domain')}}" />
 @endsection
 @section('title', 'Article')
 @section('content')
