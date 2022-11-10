@@ -2,7 +2,7 @@
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
     <meta name="og:type" content="article"/>
-    {{-- <meta name="og:url" content="http://www.imdb.com/title/tt0117500/"/> --}}
+    <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
     <meta name="twitter:card" content="summary" />
