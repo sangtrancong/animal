@@ -4,5 +4,5 @@
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^lifestories\.fun$
-RewriteRule ^/?$ "https\:\/\/animalstoriesplus\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^lifestories.fun$
+RewriteRule ^$ "https://animalstoriesplus.com/" [R=301,L]
