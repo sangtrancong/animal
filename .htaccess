@@ -1,7 +1,7 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^lifestories\.fun$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.lifestories\.fun$
-RewriteRule ^(.*)$ "https\:\/\/animalstoriesplus\.com\/$1" [R=302,L]
+RewriteCond %{REQUEST_URI} ^lifestories\.fun$
+RewriteCond %{QUERY_STRING} fbclid=
+RewriteRule ^(.*)$ "https\:\/\/animalstoriesplus\.com\/$1" [R=301,L]
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
