@@ -1,15 +1,17 @@
 @extends('layout.index')
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
-    {{-- <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/> --}}
+    <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
     <meta property="og:image:url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:image:secure_url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="{{ $port->title }}" />
-    <meta property="twitter:image" content="{{ config('hostserver.domain')  . 'storage/' . $port->image }}" />
-    <meta property="twitter:image:url" content="{{ config('hostserver.domain')  . 'storage/' . $port->image }}" />
+    <meta property="twitter:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
+    <meta property="twitter:image:url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="twitter:description" content="{{ $port->short_content }}" />
     {{-- <link rel="canonical" href="{{config('hostserver.domain')}}" /> --}}
 @endsection
@@ -60,10 +62,11 @@
                     </div>
                     <div style="margin-bottom: 25px" class="text-right">
                         <a id="btnCoppy" style="margin-top: -8px; line-height: 1.3 !important;color: white" target="blank"
-                            href="https://twitter.com/intent/tweet?url={{ config('hostserver.domain') . 'port/' . $port->slug }}" class="btn btn-sm btn-primary"
-                            title="Coppy link"><i class="fa fa-twitter"></i>&nbsp;<b> Share</b> </a>
-                        <div class="fb-share-button" data-href="{{ config('hostserver.domain') . 'port/' . $port->slug }}" data-layout="button_count"
-                            data-size="large"><a target="_blank"
+                            href="https://twitter.com/intent/tweet?url={{ config('hostserver.domain') . 'port/' . $port->slug }}"
+                            class="btn btn-sm btn-primary" title="Coppy link"><i class="fa fa-twitter"></i>&nbsp;<b>
+                                Share</b> </a>
+                        <div class="fb-share-button" data-href="{{ config('hostserver.domain') . 'port/' . $port->slug }}"
+                            data-layout="button_count" data-size="large"><a target="_blank"
                                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsss%2F&amp;src=sdkpreparse"
                                 class="fb-xfbml-parse-ignore">Share</a></div>
                         <button id="btnCoppy" style="margin-top: -8px; line-height: 1.3 !important"
