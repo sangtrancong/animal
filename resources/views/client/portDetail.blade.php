@@ -1,7 +1,7 @@
 @extends('layout.index')
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
-    <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
+    <meta property="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
