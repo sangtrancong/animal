@@ -1,12 +1,13 @@
 @extends('layout.index')
 @section('meta')
     <meta property="og:title" content="{{ $port->title }}" />
-    <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
+    {{-- <meta name="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/> --}}
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="{{ $port->title }}" />
     <meta property="twitter:image" content="{{ config('hostserver.domain')  . 'storage/' . $port->image }}" />
+    <meta property="twitter:image:url" content="{{ config('hostserver.domain')  . 'storage/' . $port->image }}" />
     <meta property="twitter:description" content="{{ $port->short_content }}" />
     <link rel="canonical" href="{{config('hostserver.domain')}}" />
 @endsection
