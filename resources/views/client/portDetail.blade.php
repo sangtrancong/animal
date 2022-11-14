@@ -13,7 +13,7 @@
     <meta property="twitter:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="twitter:image:url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="twitter:description" content="{{ $port->short_content }}" />
-    {{-- <link rel="canonical" href="{{config('hostserver.domain')}}" /> --}}
+    <link rel="canonical" href="{{config('hostserver.domain') . 'storage/' . $port->image }}}}" />
 @endsection
 @section('title', 'Article')
 @section('content')
