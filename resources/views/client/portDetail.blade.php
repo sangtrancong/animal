@@ -4,8 +4,6 @@
     <meta property="og:url" content="{{config('hostserver.domain') . 'port/' . $port->slug}}"/>
     <meta property="og:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
     <meta property="og:image:url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:image:secure_url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
