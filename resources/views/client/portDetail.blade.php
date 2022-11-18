@@ -40,10 +40,10 @@
                         @php
                             $diff = Carbon\Carbon::now()->diffInMinutes($port->updated_at);
                             if ($diff < 60) {
-                                echo $diff . ' minute ago';
+                                echo '<i class="fa fa-clock-o" aria-hidden="true"></i>  '. $diff . ' minute ago';
                             } elseif ($diff > 60 && $diff < 60 * 24) {
                                 $diff = Carbon\Carbon::now()->diffInHours($port->updated_at);
-                                echo $diff . ' hours ago';
+                                echo '<i class="fa fa-clock-o" aria-hidden="true"></i>  '. $diff . ' hours ago';
                             } else {
                                 $date = Carbon\Carbon::parse($port->updated_at)->format('F d, Y');
                                 echo '<i class="fa fa-clock-o" aria-hidden="true"></i>  ' . $date;
