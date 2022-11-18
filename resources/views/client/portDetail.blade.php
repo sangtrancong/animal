@@ -7,6 +7,15 @@
     <meta property="og:image:url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:image:secure_url" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
     <meta property="og:description" content="{{ $port->short_content }}" />
+     <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="{{ $port->title }}"/>
+  <meta itemprop="headline" content="{{ $port->title }}"/>
+  <meta itemprop="description" content="{{ $port->short_content }}"/>
+  <meta itemprop="image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}"/>
+  <meta itemprop="datePublished" content="{{Carbon\Carbon::parse($port->created_at)->format('Y-m-d')}}"/>
+  <meta itemprop="dateModified" content="{{$port->updated_at}}" />
+  <meta itemprop="author" content="phunguyen"/>
+  <!--<meta itemprop="publisher" content="Animals Nature Press"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="{{ $port->title }}" />
     <meta property="twitter:image" content="{{ config('hostserver.domain') . 'storage/' . $port->image }}" />
@@ -14,7 +23,9 @@
     <meta property="twitter:description" content="{{ $port->short_content }}" />
     <link rel="canonical" href="{{config('hostserver.domain') . 'port/' . $port->slug}}" />
 @endsection
-@section('title', 'Article')
+@section('title')
+{{$port->title}}
+@endsection
 @section('content')
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
@@ -34,8 +45,8 @@
                                 $diff = Carbon\Carbon::now()->diffInHours($port->updated_at);
                                 echo $diff . ' hours ago';
                             } else {
-                                $date = Carbon\Carbon::parse($port->updated_at)->format('m/d/Y H:i');
-                                echo $date;
+                                $date = Carbon\Carbon::parse($port->updated_at)->format('F d, Y');
+                                echo '<i class="fa fa-clock-o" aria-hidden="true"></i>  ' . $date;
                             }
                         @endphp
                     </i>
