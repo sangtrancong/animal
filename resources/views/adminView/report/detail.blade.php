@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('content')
-<table id="datatable" class="display">
+<table id="visitTable" class="display">
     <thead>
         <tr>
 

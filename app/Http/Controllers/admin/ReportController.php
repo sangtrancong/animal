@@ -25,7 +25,7 @@ class ReportController extends Controller
         ->get()->toArray();
         $arr=array();
         foreach ($data as $key => $value) {
-            $arr[$value['month']]=$value['data'];
+            $arr[$value['month']]=(int)$value['data'];
         }
         for ($i=1; $i < 13; $i++) {
             if(!isset($arr[$i])){
