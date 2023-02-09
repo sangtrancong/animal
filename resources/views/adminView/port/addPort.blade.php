@@ -45,7 +45,7 @@
         </div>
         <textarea id="content" name="content">{{ old('content') }}</textarea>
 
-        <button type="submit" class="btn btn-primary">Thêm</button>
+        <button type="submit" class="btn btn-violet">Thêm</button>
     </form>
 @endsection
 @section('script')

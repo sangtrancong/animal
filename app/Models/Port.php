@@ -16,7 +16,7 @@ class Port extends Model
         return $this->hasOne('App\Models\Category','id','category_id');
 
     }
-    public function sluggable()
+    public function sluggable():array
     {
         return [
             'slug' => [

@@ -33,8 +33,15 @@
   }
 
   .logout-container{
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 100%;
+    background-color: #dedede;
+    margin-left: 200px;
+    height: 50px;
+    display: flex;
 }
+    .btn-violet{
+        background-color: #bd2b08;
+        color: white;
+    }
+
 

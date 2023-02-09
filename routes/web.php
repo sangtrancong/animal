@@ -38,6 +38,12 @@ Route::post('/ckEditor', [CKEditorController::class, 'upload'])->name('ckEditor'
 Route::get('/autocomplete-search', [HomeController::class, 'autocompleteSearch']);
 Route::prefix('admin')->middleware('admin')->group(function(){
     Route::get('/', [AccountController::class, 'index']);
+    Route::get('account/lock/{id}',[AccountController::class,'lock']);
+    Route::get('account/unlock/{id}',[AccountController::class,'unlock']);
+    Route::get('account/changePass',[AccountController::class,'changePass']);
+    Route::post('account/changePass',[AccountController::class,'postChangePass']);
+    Route::get('account/accountPage',[AccountController::class,'accountPage']);
+    Route::post('account/accountPage',[AccountController::class,'postAccountPage']);
     Route::get('/report', [ReportController::class, 'index']);
     Route::get('/report-detail', [ReportController::class, 'detail']);
     Route::resource('account', AccountController::class);

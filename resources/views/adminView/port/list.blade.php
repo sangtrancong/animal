@@ -1,15 +1,10 @@
 @extends('layout.admin')
 
 @section('content')
-    <div class="row">
-        <div class="col-lg-4">
-            <h2>Bài viết</h2>
-        </div>
-        <div class="col-lg-2 offset-lg-6">
-            <a class="btn btn-primary" href="/admin/port/create">Thêm bài viết</a>
-        </div>
-
-    </div>
+<div style="display: flex; justify-content: space-between">
+    <h2>Bài viết</h2>
+   <a class="btn btn-violet" href="/admin/port/create">Thêm bài viết</a>
+</div>
 
     <hr>
     <table id="datatable">
@@ -52,7 +47,9 @@
                                   @elseif($item->status==2)
                                   Bỏ ưu tiên
                               @endif</button>
+                              @if (session('adminSession')[0]['role']===1)
                               <a class="dropdown-item" onclick="return confirm('Bạn chắc chắn muốn xóa bài viết này?')" href="/admin/port/{{$item->id}}/edit">Xóa</a>
+                              @endif
                             </div>
                           </div>
                     </td>

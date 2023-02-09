@@ -58,7 +58,7 @@
         </div>
         <textarea id="content" name="content">{{$port->content}}</textarea>
 
-        <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
+        <button type="submit" class="btn btn-violet">Chỉnh sửa</button>
     </form>
 @endsection
 @section('script')

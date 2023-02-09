@@ -1,20 +1,10 @@
 @extends('layout.admin')
 
 @section('content')
-<div class="logout-container">
-    <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Xin chào {{session('adminSession')[0]['username']}}
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button">Trang cá nhân</button>
-          <a href="/logout" class="dropdown-item" type="button">Đăng xuất</a>
-        </div>
-      </div>
-</div>
+
 <div style="display: flex; justify-content: space-between">
-    <h2>Danh mục sản phẩm</h2>
-   <a class="btn btn-primary" href="/admin/account/create">Thêm tài khoản</a>
+    <h2>Danh sách tài khoản</h2>
+   <a class="btn btn-violet" href="/admin/account/create">Thêm tài khoản</a>
 </div>
 
 <hr>
@@ -23,6 +13,8 @@
         <tr>
             <th>No</th>
             <th>Username</th>
+            <th>Phone</th>
+            <th>Role</th>
             <th>Trạng thái</th>
             <th></th>
         </tr>
@@ -34,11 +26,22 @@
         <tr>
             <td>{{$i++}}</td>
             <td>{{$item->username}}</td>
+            <td>{{$item->phone}}</td>
+            <td>
+                @if ($item->role==1)
+                <span class="badge badge-success">Admin</span>
+                @elseif ($item->role==2)
+                <span class="badge badge-warning">Bloger</span>
+                @else
+                <span class="badge badge-danger">Customer</span>
+                @endif
+            </td>
+
             <td>
                 @if ($item->status==1)
-                <span class="badge badge-success">Hiển thị</span>
+                <span class="badge badge-success"><i class="fa  fa-unlock"></i></span>
                 @else
-                <span class="badge badge-warning">Ẩn</span>
+                <span class="badge badge-danger"><i class="fa  fa-lock"></i></span>
                 @endif
             </td>
             <td>
@@ -48,7 +51,15 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                       <button class="dropdown-item" onclick="location.href='/admin/account/{{$item->id}}'" type="button">Chỉnh sửa</button>
-                      <a class="dropdown-item" onclick="return confirm('Bạn chắc chắn muốn reset password?')" href="/admin/account/{{$item->id}}/edit">Đặt lại mật khẩu</a>
+                      <a class="dropdown-item" onclick="return confirm('Mật khẩu được đặt về 1234512345! Bạn chắc chắn muốn đặt lại mật khẩu không?')" href="/admin/account/{{$item->id}}/edit">Đặt lại mật khẩu</a>
+                      @if ($item->status===1)
+                      <a class="dropdown-item" href="/admin/account/lock/{{$item->id}}">Khóa tài khoản</a>
+                      @else
+                      <a class="dropdown-item" href="/admin/account/unlock/{{$item->id}}">Mở tài khoản</a>
+                      @endif
+
+
+
                     </div>
                   </div>
             </td>
