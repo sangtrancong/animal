@@ -84,7 +84,7 @@ class HomeController extends Controller
         try {
             if($request['fbclid']==null){
                 $port = Port::where(['slug' => $slug])->where('status', '<>', 0)->first();
-                visits($port)->increment();
+                visits($port)->seconds(180)->increment();
                 $count=visits($port)->count();
                 $categoryPort = $port->category_id;
                 $portOther = Port::where(['category_id' => $categoryPort])->where('status', '<>', 0)->where('id', '<>', $port->id)->orderby('created_at', 'DESC')->limit(7)->get();
